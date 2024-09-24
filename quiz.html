@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
+    <link href="script.js">
     <script defer src="script.js"></script>
 </head>
 
@@ -17,17 +18,16 @@
     </div>
     <main>
         <section>
-            <h1 class="quiz">Quiz</h1>
+            <h1 class="quiz">Perguntas do Quiz</h1>
         </section>
-        <section>
-            <h2>Aqui está um quiz, com 2 perguntas de matemática. As perguntas são simples porém desafiadoras.
-            </h2>
+        <section id="quiz-container">
+            <!-- Aqui as perguntas serão carregadas dinamicamente -->
         </section>
-        <div class="botao__container">
-            <a href="quiz.html" class="botão__iniciar">Iniciar</a>
+            <div class="botao__container">
+            <a href="#" id="nextButton" class="botão__iniciar">Próxima Pergunta</a>
         </div>
+        
     </main>
-
     <footer>
 
     </footer>

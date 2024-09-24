@@ -59,13 +59,19 @@ h2{
 }
 
 .botão__iniciar {
-    
+    display: inline-block;
     background-color:#778899;
     border-radius: 5px;
     font-size: 30px;
     font-family: 'comic neue';
     font-weight: bold;
-    padding: 0 40px 5px;   
+    padding: 0 40px 5px;
+    text-decoration: none;
+    color: white;   
+}
+
+.botão__iniciar:hover {
+    background-color: #4f636e; /* Cor do botão ao passar o mouse */
 }
 
 header {
@@ -84,3 +90,88 @@ header {
     padding-left: 15px;
     margin-top: 10px;
 }
+
+/* Estilo para a opção de quiz */
+.quiz-option {
+    display: flex;
+    align-items: center;
+    font-family: 'comic neue';
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Ocultar o radio button padrão */
+.quiz-option input[type="radio"] {
+    display: none;
+}
+
+/* Estilo da bolinha personalizada (radio button estilizado) */
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #778899;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+/* Estilo da bolinha quando o radio button está selecionado */
+.custom-radio:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #778899;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Mostrar o preenchimento da bolinha quando selecionado */
+.quiz-option input[type="radio"]:checked + .custom-radio:before {
+    opacity: 1;
+}
+
+/* Estilo do resultado do quiz */
+.quiz-result {
+    font-family: Arial, sans-serif; /* Fonte */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaço acima */
+}
+
+/* Estilo do título do resultado */
+.quiz-result h2 {
+    color: #778899;
+    font-size: 24px; /* Tamanho da fonte */
+    text-align: center;
+}
+
+/* Estilo do parágrafo do resultado */
+.quiz-result p {
+    font-size: 18px; /* Tamanho da fonte */
+    margin: 10px 0; /* Margem superior e inferior */
+}
+
+/* Estilo da lista de perguntas corretas */
+.quiz-result ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento da lista */
+}
+
+/* Estilo para cada item da lista */
+.quiz-result li {
+    font-size: 20px; /* Tamanho da fonte */
+    margin: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+
